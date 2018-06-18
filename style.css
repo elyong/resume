@@ -2,3 +2,62 @@ html,body{
 	padding:0;
 	margin:0;
 }
+body{
+	min-width:350px;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+@keyframes portrait-shining{
+	0%{
+		border: .5px solid #5DB0F3;
+	}
+	50%{
+		box-shadow: 0 0 40px #C9E0F4;
+	}
+	100%{
+		border: .5px solid #5DB0F3;
+	}
+}
+@keyframes circle-shining{
+	0%{
+		margin-left:-23px;
+		border: 2px solid #C9E0F4;
+	}
+	50%{
+		box-shadow: 0 0 15px #188EEE;
+	}
+	100%{
+		margin-left:-23px;
+		border: 2px solid #C9E0F4;
+	}
+}
+@keyframes progressing{
+	0%{
+		width:0;
+	}
+	100%{
+		width:100%;
+	}
+}
+.resume{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	min-height:100vh;
+}
+.page{
+	align-self:stretch;
+	flex:1;
+	text-align: center;
+}
+.cover{
+	display: cover;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding:0 10px;
+	color: white;
+	background:url(./bg.png) repeat #188EEE;
+}
