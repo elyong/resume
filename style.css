@@ -167,3 +167,101 @@ a{
 	position:relative;
 	padding-left:30px;
 }
+.experience .item:before{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width:1px;
+	margin-left:-16px;
+	background: lightgrey;
+}
+.experience .item:hover .title .period:before{
+	animation: 1.1s infinite circle-shining;
+}
+.experience .item:not(:last-child){
+	padding-bottom: 20px;
+}
+.ability .item{
+	padding-left:14px;
+	margin: 20px 0;
+}
+.item .content{
+	font-size: 12.5px;
+	line-height: 20px;
+	color:grey;
+}
+.title{
+	line-height: 22px;
+	color:black;
+}
+.experience. .title{
+	margin-bottom: 10px;
+}
+.ability .title{
+	margin: 5px 0;
+}
+.title .period, .ability .title{
+	position: relative;
+}
+.title .period:before{
+	position:absolute;
+	content: '';
+	top:50%;
+	height:11px;
+	width:11px;
+	margin-left:-24px;
+	background-color: #188EEE;
+    border: 3px solid #C9E0F4;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.title .option{
+	position: absolute;
+	top: 50%;
+	right:0;
+	height:18px;
+	width:40px;
+	font-size:11px;
+	line-height: 18px;
+	color: grey;
+	text-align: center;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	transform: translateY(-50%);
+}
+.progress,.progressbar{
+	height:5px;
+	margin: 10px 0;
+	border-radius:10px;
+}
+.progress{
+	background-color: #CCC;
+}
+.progressbar{
+	background: linear-gradient(to right, #117AD4 30%, #10AFED);
+}
+.ability .item:hover .progressbar{
+	animation: 1.2s cubic-bezier(0.23,1,0.32,1) progressing;
+}
+.pb90{
+	width:90%;
+}
+.pb50{
+	width:50%;
+}
+.pb20{
+	width:20%;
+}
+@media(min-width: 768px){
+	.resume{
+		flex-direction: row;
+	}
+}
+@media(max-width: 768px){
+	.resume{
+		flex-direction: column;
+	}
+	.cover{
+		height:100vh;
+	}
+}
