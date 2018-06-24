@@ -71,6 +71,7 @@ a{
     justify-content: center;
     align-items: center;
     height:100vh;
+    min-height: 100vh;
 }
 .port-container{
     position: relative;
@@ -136,7 +137,26 @@ a{
 .brief-intro .spercific{
     width: 100%;
 }
-
+.detail-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:70%;
+    line-height: 140%;
+    margin:75px auto;
+}
+.detail-intro div{
+    padding: 10px 5px;
+    margin:10px auto;
+}
+.detail-intro .content{
+    border: 1px solid #0E6AB8;
+    box-shadow: 0 0 1px #5DB0F3;
+    text-align: left;
+    font-size:.8em;
+}
 /*简历右侧详细描述样式*/
 .detail{
     box-sizing: border-box;
@@ -150,7 +170,7 @@ a{
 }
 .label{
     position: relative;
-    margin: 15px 0;
+    margin: 40px 0;
 }
 .label div{
     position: relative;
@@ -262,11 +282,14 @@ a{
 .ability .item:hover .progressbar{
     animation: 1.2s cubic-bezier(0.23,1,0.32,1) progressing;
 }
-.pb90{
-    width: 90%;
+.pb80{
+    width: 80%;
 }
 .pb50{
     width: 50%;
+}
+.pb30{
+    width: 30%;
 }
 .pb20{
     width: 20%;
@@ -277,12 +300,20 @@ a{
     .resume{
         flex-direction: row;
     }
-
+}
 @media (max-width: 768px){
     .resume{
         flex-direction: column;
     }
     .cover{
         height: 100vh;
+    }
+}
+@media (max-height: 600px) {
+    .first{
+        height:600px;
+    }
+    .detail-intro{
+        height:200px;
     }
 }
